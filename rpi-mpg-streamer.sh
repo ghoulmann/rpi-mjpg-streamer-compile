@@ -20,11 +20,12 @@ install ()
 
 #install packages from repositories using function
 install build-essential \
-	subversion
+	subversion \
+	libjpeg-dev
 
 #Checkout mjpg-streamer to /tmp/mjpg-streamer/
 svn co https://mjpg-streamer.svn.sourceforge.net/svnroot/mjpg-streamer /tmp/mjpg-streamer
 
 #Compile mjpg-streamer
-cd /tmp/mjpg-streamer/mjpg-streamer/ && ./configure && make && make install
+cd /tmp/mjpg-streamer/mjpg-streamer/ && make && make install
 
